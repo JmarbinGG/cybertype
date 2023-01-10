@@ -4,6 +4,8 @@
   "homepage": "https://JmarbinGG.github.io/cybertype",
   "private": true,
   "scripts": {
+    "predeploy": "npm run build",
++   "deploy": "cybertype -d build",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
