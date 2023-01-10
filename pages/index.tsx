@@ -59,7 +59,7 @@ const Home: NextPage = () => {
 
 const AppHead = (
   <Head>
-    <title> cybertype </title>
+    <title> jType </title>
     <meta name="theme-color" content="#171212" />
     <meta
       name="description"
@@ -67,7 +67,7 @@ const AppHead = (
     />
     <meta
       name="keywords"
-      content="cybertype, typing app, practice typing, simple typing app, improve typing speed"
+      content="jType, typing app, practice typing, simple typing app, improve typing speed"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </Head>
