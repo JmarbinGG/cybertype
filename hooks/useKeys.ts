@@ -31,7 +31,7 @@ export function useKeys(
 
       event.preventDefault()
 
-      if (event.key === 'ESC') {
+      if (event.key === 'Escape') {
         return dispatch({ type: 'reset' })
       }
 
