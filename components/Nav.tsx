@@ -5,9 +5,9 @@ import { memo } from 'react'
 export const Nav = memo(function Nav() {
   return (
     <nav className={styles.nav}>
-      <div className={styles.appName}>CyberType</div>
+      <div className={styles.appName}>jType</div>
       <a
-        href="https://github.com/MananTank/cybertype"
+        href="https://github.com/JmarbinGG/jtype"
         target="_blank"
         rel="noreferrer"
         className={styles.github}
@@ -16,15 +16,7 @@ export const Nav = memo(function Nav() {
         {GithubIcon}
       </a>
 
-      <a
-        href="https://twitter.com/MananTank_"
-        target="_blank"
-        rel="noreferrer"
-        className={styles.twitter}
-        aria-label="Twitter of the creator"
-      >
-        {twitterIcon}
-      </a>
+     
     </nav>
   )
 })
