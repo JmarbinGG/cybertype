@@ -49,7 +49,7 @@ const Home: NextPage = () => {
       <KeyStats keyStats={state.keyStats} />
 
       <div className={styles.tips}>
-        <kbd>enter</kbd> to reset / change
+        <kbd>esc</kbd> to reset / change
       </div>
 
       <Nav />
