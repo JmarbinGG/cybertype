@@ -1,9 +1,9 @@
 A Fast &amp; Minimal Typing App, with some settings tweaked
-# cybertype.app
+# jtype.netlify.app
 
 A Fast and Minimal Typing App.
 
-Checkout [cybertype.app](https://cybertype.app/)
+Checkout [jtype.netlify.app](https://jtype.netlify.app/)
 
 Practice typing in various modes such as common 1k, 5k, 10k English Words, most commonly misspelled words, Quotes or Programming Language keywords for various languages such as JavaScript, HTML, CSS, Rust, Python, C++ etc with Sweet Mechanical Keyboard Sounds.
 
@@ -55,3 +55,5 @@ It is a Progressive Web app that can be installed and can work 100% offline.
 ### Credits for Data Collection
 
 JSON Data for various languages is collected from the amazing [MonkeyType](https://github.com/monkeytypegame/monkeytype) Repository.
+I just forked it and changed some things to my liking, 
+Credit goes to Manantank(https://github.com/MananTank/cybertype)
