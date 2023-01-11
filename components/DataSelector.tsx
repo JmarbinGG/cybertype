@@ -13,7 +13,8 @@ export const dataNameGroups = [
       'English 5K',
       'English 10K',
       'Wordle',
-      'Commonly Misspelled'
+      'Commonly Misspelled',
+      'CNN Privacy Policy'
     ]
   },
   {
