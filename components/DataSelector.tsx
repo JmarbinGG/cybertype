@@ -8,6 +8,7 @@ export const dataNameGroups = [
     values: [
       'Quotes',
       'English 200',
+      'Capital Letters 200',
       'English 1K',
       'English 5K',
       'English 10K',
