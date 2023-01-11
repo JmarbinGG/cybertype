@@ -5,7 +5,7 @@ import { Action, State } from '../lib/types'
 function dataNameToFileName(dataName: string) {
   if (dataName === 'C#') return 'csharp'
   if (dataName === 'Capital Letters 200') return 'capitals-200'
-  if (data.Name === 'CNN Privacy Policy') return 'cnnprivpo'
+  if (dataName === 'CNN Privacy Policy') return 'cnnprivpo'
   return dataName.toLowerCase().replace(/ /g, '-')
 }
 
