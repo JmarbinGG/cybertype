@@ -172,6 +172,7 @@ function handleKeyDown(
   // append new words if required
   if (state.progress.wordIndex > state.words.length - bufferWords) {
     appendWords(state)
+    resetData(state)
   }
 }
 
@@ -224,6 +225,15 @@ function reset(state: State) {
   state.progress = {
     wordIndex: 0,
     charIndex: 0
+  }
+  //reset data every time we append words for more accurate stats
+  function resetData(state: State) {
+  state.typingStarted = true
+  state.lastWordTypedTime = 0
+  state.lastCharTypedTime = 0
+  state.totalTimeTaken = 0
+  state.totalWordsTyped = 0
+  state.totalCharsTyped = 0
   }
 
   // set new words
