@@ -15,25 +15,25 @@ export default function Document() {
         <link href="/icons/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32" />
 
         {/* <!-- Facebook Meta Tags --> */}
-        <meta property="og:url" content="https://cybertype.app" />
+        <meta property="og:url" content="https://jtype.netlify.app" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="cybertype" />
+        <meta property="og:title" content="jtype" />
         <meta
           property="og:description"
-          content="Fast and Minimal Typing App - Improve your typing speed."
+          content="Fast and Minimal Typing App"
         />
-        <meta property="og:image" content="https://cybertype.app/og.png" />
+        <meta property="og:image" content="https://jtype.netlify.app/icons/icon-meta.png" />
 
         {/* <!-- Twitter Meta Tags --> */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="cybertype.app" />
-        <meta property="twitter:url" content="https://cybertype.app" />
-        <meta name="twitter:title" content="cybertype" />
+        <meta property="twitter:domain" content="jtype.netlify.app" />
+        <meta property="twitter:url" content="https://jtype.netlify.app" />
+        <meta name="twitter:title" content="jtype" />
         <meta
           name="twitter:description"
-          content="Fast and Minimal Typing App - Improve your typing speed."
+          content="Fast and Minimal Typing App"
         />
-        <meta name="twitter:image" content="https://cybertype.app/og.png" />
+        <meta name="twitter:image" content="https://jtype.netlify.app/icons/icon-meta.png" />
 
         {/* Critical Font CSS  */}
         <style
