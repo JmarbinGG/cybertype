@@ -242,13 +242,13 @@ function reset(state: State) {
 }
  
 function resetData(state: State) {
-  state.typingStarted = false
-  state.typingStarted = true
   state.lastWordTypedTime = 0
   state.lastCharTypedTime = 0
   state.totalTimeTaken = 0
   state.totalWordsTyped = 0
   state.totalCharsTyped = 0
+  state.typingStarted = false
+  state.typingStarted = true
   }
 
 export function getInitialState(): State {
