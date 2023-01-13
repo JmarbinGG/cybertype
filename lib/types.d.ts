@@ -28,12 +28,14 @@ export type State = {
   totalWordsTyped: number
   totalCharsTyped: number
   totalErrors: number
+  lastHundoCharsTyped: number
   keyStats: KeyStatRecord
   words: string[]
   errorLocations: ErrorLocations
   progress: Progress
   lastWordTypedTime: number
   lastCharTypedTime: number
+  lastHundoCharsTypedTime: number
 }
 
 export type Action =
