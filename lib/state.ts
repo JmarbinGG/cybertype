@@ -114,7 +114,6 @@ export function stateReducer(state: State, action: Action): void {
       
       if (statsResetCounter >= 100){
         resetData(state)
-        state.showSoundSelector = action.data
       }
       
 
