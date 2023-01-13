@@ -16,6 +16,7 @@ type LoadedData = Record<State['dataName'], State['data'] | undefined>
 export const loadedData = {} as LoadedData
 
 const initWords = 500
+int statsResetCounter = 0
 
 // new words will be appended if less than bufferWords are left to be typed
 const bufferWords = 100
@@ -108,6 +109,13 @@ export function stateReducer(state: State, action: Action): void {
       }
 
       handleKeyDown(state, action.key, now, isCorrect)
+      
+      statsResetCounter++
+      
+      if (statsResetCounter >= 100){
+        resetData(state)
+      }
+      
 
       return
     }
