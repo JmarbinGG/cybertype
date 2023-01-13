@@ -242,6 +242,7 @@ function reset(state: State) {
 }
  
 function resetData(state: State) {
+  state.typingStarted = false
   state.typingStarted = true
   state.lastWordTypedTime = 0
   state.lastCharTypedTime = 0
