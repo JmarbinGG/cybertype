@@ -1,5 +1,6 @@
 import styles from '../styles/Stats.module.scss'
 import { getSpeed } from '../lib/utils'
+import { State } from './types'
 
 type StatsProps = {
   timeTaken: number
@@ -9,8 +10,8 @@ type StatsProps = {
 
 export function Stats(props: StatsProps) {
   const { timeTaken, errors, charsTyped } = props
-  const wpmSpeed = getSpeed(charsTyped, timeTaken * 5)
-  const errorRate = charsTyped === 0 ? 0 : (errors * 100) / charsTyped
+  const wpmSpeed = getSpeed(state.lastHundoCharsTyped, state.lastHundoCharsTypedTime * 5)
+  const errorRate = charsTyped === 0 ? 0 : (errors * 100) / state.lastHundoCharsTyped
   const accuracy = charsTyped === 0 ? 0 : Math.max(Math.round(100 - errorRate), 0)
 
   return (
