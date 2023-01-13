@@ -249,12 +249,7 @@ function resetData(state: State) {
   state.totalTimeTaken = 0
   state.totalWordsTyped = 0
   state.totalCharsTyped = 0
-  state.keyStats = createEmptyKeyStatRecord()
   state.errorLocations = {}
-  state.progress = {
-    wordIndex: 0,
-    charIndex: 0
-  }
   }
 
 export function getInitialState(): State {
