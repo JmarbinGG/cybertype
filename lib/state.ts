@@ -16,7 +16,7 @@ type LoadedData = Record<State['dataName'], State['data'] | undefined>
 export const loadedData = {} as LoadedData
 
 const initWords = 500
-let statsResetCounter = 0
+//let statsResetCounter = 0
 
 // new words will be appended if less than bufferWords are left to be typed
 const bufferWords = 100
@@ -110,11 +110,11 @@ export function stateReducer(state: State, action: Action): void {
 
       handleKeyDown(state, action.key, now, isCorrect)
       
-      statsResetCounter++
+    //  statsResetCounter++
       
-      if (statsResetCounter >= 100){
-        resetData(state)
-      }
+    //  if (statsResetCounter >= 100){
+      //  resetData(state)
+      //}
       
 
       return
@@ -241,13 +241,14 @@ function reset(state: State) {
   appendWords(state, initWords)
 }
  
-function resetData(state: State) {
-  state.totalErrors = 0
-  state.totalTimeTaken = 0
-  state.totalWordsTyped = 0
-  state.totalCharsTyped = 0
+//function resetData(state: State) {
+  //state.totalErrors = 0
+  //state.totalTimeTaken = 0
+  //state.totalWordsTyped = 0
+  //state.totalCharsTyped = 0
   
-  }
+  
+ / }
 
 export function getInitialState(): State {
   const soundPack = getLocalStorage(
