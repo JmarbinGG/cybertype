@@ -4,7 +4,8 @@ import {
   getLocalStorage,
   dataNameValidator,
   booleanValidator,
-  soundPackValidator
+  soundPackValidator,
+  musicListValidator
 } from './localStorage'
 import { SoundPack } from './sounds'
 import { MusicList } from './music'
