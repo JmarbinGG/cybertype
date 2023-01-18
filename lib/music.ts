@@ -1,23 +1,21 @@
 import { Howl } from 'howler'
 
-function packPlayer(pack: string, format: string, volume: number) {
-  const clicks: Howl[] = []
-  for (let i = 0; i < 6; i++) {
-    clicks[i] = new Howl({ src: `/sounds/${pack}/click${i + 1}.${format}`, volume })
-  }
+function packPlayer(pack: string, format: string, volume: number, link: string) {
+  const song: Howl[] = []
+    song[1] = new Howl({ src: link, volume })
+  
 
   return () => {
-    const i = Math.round(Math.random() * 5)
-    clicks[i].play()
+    song[1].play()
   }
 }
 
 export function getSounds() {
   return {
     packs: {
-      song1: packPlayer('song1', 'wav', 0.8),
-      song2: packPlayer('song2', 'wav', 0.8),
-      song3: packPlayer('song3', 'wav', 0.8)
+      song1: packPlayer('song1', 'wav', 0.8, 'https://drive.google.com/uc?export=download&id=10kwRyjDu32UxUNZFFfGuU2rtJbExFs-v'),
+      song2: packPlayer('song2', 'wav', 0.8, 'https://drive.google.com/uc?export=download&id=10kwRyjDu32UxUNZFFfGuU2rtJbExFs-v'),
+      song3: packPlayer('song3', 'wav', 0.8, 'https://drive.google.com/uc?export=download&id=10kwRyjDu32UxUNZFFfGuU2rtJbExFs-v')
     },
   }
 }
