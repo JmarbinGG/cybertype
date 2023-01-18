@@ -13,29 +13,27 @@ function packPlayer(pack: string, format: string, volume: number) {
 }
 
 export function getSounds() {
-  const error = new Howl({ src: '/sounds/error.wav', volume: 0.3 })
   return {
     packs: {
-      nkCreams: packPlayer('nkCreams', 'aac', 0.8),
-      otemuBrowns: packPlayer('otemuBrowns', 'aac', 0.8),
-      holyPandas: packPlayer('holyPandas', 'wav', 0.8)
+      song1: packPlayer('song1', 'wav', 0.8),
+      song2: packPlayer('song2', 'wav', 0.8),
+      song3: packPlayer('song3', 'wav', 0.8)
     },
-    error: () => error.play()
   }
 }
 
-type SoundPackInfo = {
+type MusicListInfo = {
   name: string
-  id: SoundPack
+  id: musicList
   type: string
 }
 
-export const soundPacks: SoundPackInfo[] = [
-  { name: 'NK Creams', id: 'nkCreams', type: 'Linear' },
-  { name: 'Otemu Browns', id: 'otemuBrowns', type: 'Tactile' },
-  { name: 'Holy Pandas', id: 'holyPandas', type: 'Tactile' }
+export const musicList: MusicListInfo[] = [
+  { name: 'song1', id: 'song1' },
+  { name: 'song2', id: 'song2' },
+  { name: 'song3', id: 'song3' }
 ]
 
-export type Sounds = ReturnType<typeof getSounds>
+export type Music = ReturnType<typeof getSounds>
 
-export type SoundPack = keyof Sounds['packs']
+export type MusicList = keyof Sounds['packs']
