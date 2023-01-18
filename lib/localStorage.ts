@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { dataNameGroups } from '../components/DataSelector'
 import { soundPacks } from './sounds'
+import { musicList } from './music'
 import { State } from './types'
 
 export function getLocalStorage(
@@ -38,6 +39,10 @@ export const soundPackValidator = (str: string) => {
   return validSoundPackIds.has(str)
 }
 
+export const musicListValidator = (str: string) => {
+  return true
+}
+
 export const booleanValidator = (str: string) => {
   return str === 'false' || str === 'true'
 }
@@ -68,4 +73,8 @@ export function useLocalStorage(state: State) {
   useEffect(() => {
     setLocalStorage('soundPack', state.soundPack)
   }, [state.soundPack])
+  
+  useEffect(() => {
+    setLocalStorage('musicList', state.musicList)
+  }, [state.musicList])
 }
