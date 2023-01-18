@@ -8,6 +8,7 @@ import { DataSelector } from './DataSelector'
 import { ClientOnly } from './ClientOnly'
 import { closeIcon } from './icons'
 import { SoundSelector } from './SoundSelector'
+import { MusicSelector } from './MusicSelector'
 
 export type Props = {
   state: State
@@ -25,6 +26,10 @@ export function DynamicIsland({ state, dispatch }: Props) {
 
   function closeSoundSelector() {
     dispatch({ type: 'setShowSoundSelector', data: false })
+  }
+  
+  function closeSoundSelector() {
+    dispatch({ type: 'setShowMusicSelector', data: false })
   }
 
   const isModalOpen = state.showThemes || state.showDataSelector
@@ -71,6 +76,16 @@ export function DynamicIsland({ state, dispatch }: Props) {
               handleClose={close}
               dispatch={dispatch}
               selectedSoundPack={state.soundPack}
+            />
+           <DynamicIslandExpander
+          handleClose={closeMusicSelector}
+          ratio={0.5}
+          show={state.showMusicSelector}
+          render={close => (
+            <MusicSelector
+              handleClose={close}
+              dispatch={dispatch}
+              selectedSong={state.song}
             />
           )}
         />
