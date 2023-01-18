@@ -1,33 +1,33 @@
-import { SoundPack, soundPacks } from '../lib/sounds'
+import { MusicList, musicList } from '../lib/music'
 import { Action } from '../lib/types'
 import styles from '../styles/SoundSelector.module.scss'
 import { DoneIcon } from './icons'
 
 export type Props = {
   handleClose: () => void
-  selectedSoundPack: SoundPack
+  selectedSong: MusicList
   dispatch: React.Dispatch<Action>
 }
 
-export function SoundSelector(props: Props) {
+export function MusicSelector(props: Props) {
   return (
     <div className={styles.options}>
-      {soundPacks.map(soundPack => {
+      {musicList.map(musicList => {
         return (
           <div
-            key={soundPack.id}
+            key={musicList.id}
             className={styles.option}
-            data-active={props.selectedSoundPack === soundPack.id}
+            data-active={props.selectedSoundPack === musicList.id}
             onClick={() => {
-              props.dispatch({ type: 'setSoundPack', data: soundPack.id })
+              props.dispatch({ type: 'setSoundPack', data: musicList.id })
               props.handleClose()
             }}
           >
-            {props.selectedSoundPack === soundPack.id && (
+            {props.selectedSong === musicList.id && (
               <div className={styles.done}> {DoneIcon} </div>
             )}
-            <div className={styles.name}> {soundPack.name}</div>
-            <div className={styles.type}> {soundPack.type}</div>
+            <div className={styles.name}> {musicList.name}</div>
+            <div className={styles.type}> {musicList.type}</div>
           </div>
         )
       })}
