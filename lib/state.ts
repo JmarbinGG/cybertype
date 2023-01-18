@@ -7,6 +7,7 @@ import {
   soundPackValidator
 } from './localStorage'
 import { SoundPack } from './sounds'
+import { MusicList } from './music'
 import { State, Action, QuoteData } from './types'
 import { getRandomWords, createEmptyKeyStatRecord } from './utils'
 
@@ -35,6 +36,11 @@ export function stateReducer(state: State, action: Action): void {
       state.soundPack = action.data
       return
     }
+     
+     case 'setSong': {
+      state.song = action.data
+      return
+    }
 
     case 'setShowDataSelector': {
       state.showDataSelector = action.data
@@ -47,6 +53,10 @@ export function stateReducer(state: State, action: Action): void {
     }
 
     case 'setShowSoundSelector': {
+      state.showSoundSelector = action.data
+      return
+    }
+    case 'setShowMusicSelector': {
       state.showSoundSelector = action.data
       return
     }
@@ -256,6 +266,11 @@ export function getInitialState(): State {
     'nkCreams',
     soundPackValidator
   ) as SoundPack
+  const musicList = getLocalStorage(
+    'song1',
+    'song2',
+    musicListValidator
+    ) as MusicList
 
   const soundEnabled =
     getLocalStorage('soundEnabled', 'true', booleanValidator) === 'false' ? false : true
@@ -268,8 +283,10 @@ export function getInitialState(): State {
 
   return {
     soundPack,
+    musicList,
     showDataSelector: false,
     showSoundSelector: false,
+    showMusicSelector: false,
     showThemes: false,
     soundEnabled,
     fetchingData: false,
