@@ -16,6 +16,8 @@ export type ErrorLocations = Record<number, Record<number, boolean>> // { 0: { 1
 
 export type State = {
   soundPack: SoundPack
+  musicList: MusicList
+  showMusicSelector: boolean
   showSoundSelector: boolean
   showDataSelector: boolean
   showThemes: boolean
@@ -69,8 +71,16 @@ export type Action =
       data: boolean
     }
   | {
+      type: 'setShowMusicSelector'
+      data: boolean
+    }
+  | {
       type: 'setSoundPack'
       data: SoundPack
+    }
+  | {
+      type: 'setMusicList'
+      data: MusicList
     }
 
 export type QuoteData = {
